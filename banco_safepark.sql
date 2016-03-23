@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tel_fixo` varchar(20) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `data_cadastro` date NOT NULL,
-  `data_desattivacao` date DEFAULT NULL
+  `data_desativacao` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `vaga` (
