@@ -1,0 +1,15 @@
+Ferramentas utilizadas no projeto:
+
+SGDB: MySql, gerenciado via PHP MyAdmin.
+
+Linguagens de Programação: PHP (Servidor) e JavaScript (cliente).
+
+Front end: HTML5 e CSS3;
+
+Framework: Bootstrap
+
+Ferramentas em ambiente Windows:
+XAMPP, editor Sublime.
+
+Ferramentas em ambiente Linux:
+GEdit, linha de comando. Apache e MySql.
