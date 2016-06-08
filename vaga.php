@@ -79,7 +79,7 @@
                   <a href="ocorrencia.php">Nova Ocorrência</a>
                 </li>
                 <li>
-                  <a href="ocorrencia.php">Minhas Ocorrências</a>
+                    <a href="minhas_ocorrencias.php">Minhas Ocorrências</a>
                 </li>
               </ul>
             </li>

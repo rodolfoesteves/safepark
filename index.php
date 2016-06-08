@@ -34,10 +34,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ocorrências <i class="et-down fa fa-fw fa-lg fa-pencil-square-o text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="Ocorrencia.php.">Nova Ocorrência</a>
+                    <a href="ocorrencia.php.">Nova Ocorrência</a>
                 </li>
                 <li>
-                  <a href="Ocorrencia.php">Minhas Ocorrências</a>
+                    <a href="minhas_ocorrencias.php">Minhas Ocorrências</a>
                 </li>
               </ul>
             </li>

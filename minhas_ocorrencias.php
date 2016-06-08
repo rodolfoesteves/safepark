@@ -48,9 +48,6 @@
         </div>
       </div>
     </div>
-    <div class="section section-success">
-      <div class="container-fluid"></div>
-    </div>
     <div class="navbar navbar-default navbar-fixed-top navbar-inverse" id="menuTopo">
       <div class="container">
         <div class="navbar-header">
@@ -69,11 +66,11 @@
             <li id="home">
               <a href="index.php"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
             </li>
-            <li class="disabled">
-              <a href="#"><i class="fa fa-fw fa-lg fa-user pull-left text-success"></i>Dados Pessoais</a>
+            <li id="usuario">
+              <a href="usuario"><i class="fa fa-fw fa-lg fa-user pull-left text-success"></i>Dados Pessoais</a>
             </li>
-            <li id="veiculo">
-              <a href="veiculo.php"><i class="fa fa-automobile fa-fw fa-lg pull-left text-success"></i>Veículos</a>
+            <li>
+              <a href="veiculo.php" id="veiculo"><i class="fa fa-automobile fa-fw fa-lg pull-left text-success"></i>Veículos</a>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ocorrências <i class="et-down fa fa-fw fa-lg fa-pencil-square-o text-success"></i></a>
@@ -82,25 +79,25 @@
                   <a href="ocorrencia.php">Nova Ocorrência</a>
                 </li>
                 <li>
-                    <a href="minhas_ocorrencias.php">Minhas Ocorrências</a>
+                  <a>Minhas Ocorrências</a>
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" contenteditable="true">Administrar <i class="et-down fa fa-lg fa-wrench pull-right text-success"></i></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administrar <i class="et-down fa fa-lg fa-wrench pull-right text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="usuario.php" contenteditable="true">Usuários</a>
+                  <a href="usuario.php">Usuários</a>
                 </li>
                 <li>
-                  <a href="veiculo.php" contenteditable="true">Veiculos</a>
+                  <a href="veiculo.php">Veiculos</a>
                 </li>
                 <li>
-                  <a href="vaga.php" contenteditable="true">Vagas</a>
+                  <a href="vaga.php">Vagas</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a href="ocorrencia.php" contenteditable="true">Ocorrências</a>
+                  <a href="ocorrencia.php">Ocorrências</a>
                 </li>
               </ul>
             </li>
@@ -111,11 +108,14 @@
       </div>
     </div>
     <div class="section section-success">
+      <div class="container-fluid"></div>
+    </div>
+    <div class="section section-success">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-3">
             <img src="imagens\logoifsphto.png" class="center-block img-responsive img-rounded">
-            <img src="imagens\usuarios.png" class="center-block img-responsive img-rounded" id="img_usuario">
+            <img src="imagens\ocorrencia.png" class="center-block img-responsive" id="img_usuario">
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-12">
-                    <h1>Cadastro de Usuarios</h1>
+                    <h1>Minhas Ocorrências</h1>
                   </div>
                 </div>
               </div>
@@ -152,7 +152,8 @@
               <div class="form-group has-feedback" id="prontuario">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">
-                    <span style="font-weight: normal;">Prontuário:</span>
+                    <span style="font-weight: normal;">Relator:</span>
+                    <br>
                   </label>
                 </div>
                 <div class="col-sm-10">
@@ -163,7 +164,7 @@
               <div class="form-group has-feedback" id="nome">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">
-                    <span style="font-weight: normal;">Nome:</span>
+                    <span style="font-weight: normal;">Veiculo:</span>
                   </label>
                 </div>
                 <div class="col-sm-10">
@@ -174,7 +175,7 @@
               <div class="form-group has-feedback" id="celular">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">
-                    <span style="font-weight: normal;">Celular:</span>
+                    <span style="font-weight: normal;">Placa</span>
                   </label>
                 </div>
                 <div class="col-sm-10">
@@ -185,7 +186,7 @@
               <div class="form-group has-feedback" id="telefone_fixo">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">
-                    <span style="font-weight: normal;">Telefone Fixo:</span>
+                    <span style="font-weight: normal;">Proprietario:</span>
                   </label>
                 </div>
                 <div class="col-sm-10">
@@ -201,6 +202,17 @@
                 </div>
                 <div class="col-sm-10">
                   <input type="email" class="form-control input-lg" id="inputEmail3" placeholder="email">
+                  <span class="fa fa-check form-control-feedback"></span>
+                </div>
+              </div>
+              <div class="form-group has-feedback" id="ocorrencia">
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">
+                    <span style="font-weight: normal;">Ocorrência:</span>
+                  </label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-lg" id="inputEmail3" placeholder="ocorrencia">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>
