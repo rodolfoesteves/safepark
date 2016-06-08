@@ -15,30 +15,30 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" id="marca" href="index.html"><span><b>Usuarios</b></span></a>
+          <a class="navbar-brand" id="marca" href="index.php"><span><b>Usuarios</b></span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="home">
-              <a href="index.html"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
+              <a href="index.php"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administrar <i class="et-down fa fa-fw fa-lg fa-wrench pull-right text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="usuarios.html">Usuários</a>
+                  <a href="usuarios.php">Usuários</a>
                 </li>
                 <li>
-                  <a href="veiculos.html">Veiculos</a>
+                  <a href="veiculos.php">Veiculos</a>
                 </li>
                 <li>
-                  <a href="vagas.html">Vagas</a>
+                  <a href="vagas.php">Vagas</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a href="ocorrencias.html">Ocorrências</a>
+                  <a href="ocorrencias.php">Ocorrências</a>
                 </li>
               </ul>
             </li>
@@ -57,17 +57,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" id="marca" href="index.html"><span><b>SafePark</b></span></a>
+          <a class="navbar-brand" id="marca" href="index.php"><span><b>SafePark</b></span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="home">
-              <a href="index.html"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
+              <a href="index.php"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
             </li>
             <li id="usuario">
-              <a href="usuario.html"><i class="fa fa-fw fa-lg fa-user pull-left text-success"></i>Dados Pessoais</a>
+              <a href="usuario.php"><i class="fa fa-fw fa-lg fa-user pull-left text-success"></i>Dados Pessoais</a>
             </li>
             <li class="disabled">
               <a href="#"><i class="fa fa-automobile fa-fw fa-lg pull-left text-success"></i>Veículos</a>
@@ -76,10 +76,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ocorrências <i class="et-down fa fa-fw fa-lg fa-pencil-square-o text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="ocorrencia.html">Nova Ocorrência</a>
+                  <a href="ocorrencia.php">Nova Ocorrência</a>
                 </li>
                 <li>
-                  <a href="ocorrencia.html">Minhas Ocorrências</a>
+                  <a href="ocorrencia.php">Minhas Ocorrências</a>
                 </li>
               </ul>
             </li>
@@ -87,17 +87,17 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" contenteditable="true">Administrar <i class="et-down fa fa-lg fa-wrench pull-right text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="usuario.html" contenteditable="true">Usuários</a>
+                  <a href="usuario.php" contenteditable="true">Usuários</a>
                 </li>
                 <li>
-                  <a href="veiculo.html" contenteditable="true">Veiculos</a>
+                  <a href="veiculo.php" contenteditable="true">Veiculos</a>
                 </li>
                 <li>
-                  <a href="vaga.html" contenteditable="true">Vagas</a>
+                  <a href="vaga.php" contenteditable="true">Vagas</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a href="ocorrencia.html" contenteditable="true">Ocorrências</a>
+                  <a href="ocorrencia.php" contenteditable="true">Ocorrências</a>
                 </li>
               </ul>
             </li>

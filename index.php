@@ -15,29 +15,29 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" id="marca" href="index.html"><span><b>SafePark</b></span></a>
+          <a class="navbar-brand" id="marca" href="index.php"><span><b>SafePark</b></span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="home" class="disabled">
-              <a href="index.html"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
+              <a href="index.php"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
             </li>
             <li id="dados_pessoais">
-              <a href="usuario.html"><i class="fa fa-fw fa-lg fa-user pull-left text-success"></i>Dados Pessoais</a>
+              <a href="usuario.php"><i class="fa fa-fw fa-lg fa-user pull-left text-success"></i>Dados Pessoais</a>
             </li>
             <li id="veiculo">
-              <a href="veiculo.html"><i class="fa fa-automobile fa-fw fa-lg pull-left text-success"></i>Veículos</a>
+              <a href="veiculo.php"><i class="fa fa-automobile fa-fw fa-lg pull-left text-success"></i>Veículos</a>
             </li>
             <li class="dropdown" id="ocorrencia">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ocorrências <i class="et-down fa fa-fw fa-lg fa-pencil-square-o text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="Ocorrencia.html.">Nova Ocorrência</a>
+                  <a href="Ocorrencia.php.">Nova Ocorrência</a>
                 </li>
                 <li>
-                  <a href="Ocorrencia.html">Minhas Ocorrências</a>
+                  <a href="Ocorrencia.php">Minhas Ocorrências</a>
                 </li>
               </ul>
             </li>
@@ -45,17 +45,17 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administrar <i class="et-down fa fa-lg fa-wrench pull-right text-success"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                  <a href="usuario.html">Usuários</a>
+                  <a href="usuario.php">Usuários</a>
                 </li>
                 <li>
-                  <a href="veiculo.html">Veiculos</a>
+                  <a href="veiculo.php">Veiculos</a>
                 </li>
                 <li>
-                  <a href="vaga.html">Vagas</a>
+                  <a href="vaga.php">Vagas</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a href="ocorrencia.html">Ocorrências</a>
+                  <a href="ocorrencia.php">Ocorrências</a>
                 </li>
               </ul>
             </li>
