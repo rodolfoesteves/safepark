@@ -1,8 +1,5 @@
 <?php
 
-/* Classe criada em 13 de julho de 2012 por LEDEL, L.C. */
-// Última alteração: 03/02/2013.
-
 class AcessoBD{
 
 	var $enderecoBD;		// endereço do SGBD.
@@ -17,9 +14,9 @@ class AcessoBD{
 
 	function AcessoBD(){		// construtor da classe.
 		$this->enderecoBD = "localhost";
-		$this->nomeBD = "intranetIFSP";
-		$this->usuarioBD = "lhifto";
-		$this->senhaBD = "p47Rcw@oP";
+		$this->nomeBD = "safepark";
+		$this->usuarioBD = "root";
+		$this->senhaBD = "master";
 		// echo "<br>AcessoBD--> Executou o construtor...";
 		// echo "<br>AcessoBD--> Valor de enderecoBD: ".$this->enderecoBD;
 		// echo "<br>AcessoBD--> Valor de nomeDB: ".$this->nomeBD;
