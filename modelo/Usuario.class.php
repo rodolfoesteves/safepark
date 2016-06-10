@@ -1,29 +1,29 @@
 <?php
 
+include './AcessoBD.class.php';
+
 class Usuario {
     
     private $id,
             $prontuario,
-            $hash_senha,
+            $senha,
             $nome,
             $celular,
             $tel_fixo,
             $email,
             $data_cadastro,
             $data_desativacao;
-    
-    function __construct($id, $prontuario, $hash_senha, $nome, $celular, $tel_fixo, $email, $data_cadastro, $data_desativacao) {
-        $this->id = $id;
+            
+    function __construct($prontuario, $senha, $nome, $celular, $tel_fixo, $email, $data_cadastro) {
         $this->prontuario = $prontuario;
-        $this->hash_senha = $hash_senha;
+        $this->senha = $senha;
         $this->nome = $nome;
         $this->celular = $celular;
         $this->tel_fixo = $tel_fixo;
         $this->email = $email;
         $this->data_cadastro = $data_cadastro;
-        $this->data_desativacao = $data_desativacao;
     }
-
+            
     function getId() {
         return $this->id;
     }
@@ -32,8 +32,8 @@ class Usuario {
         return $this->prontuario;
     }
 
-    function getHash_senha() {
-        return $this->hash_senha;
+    function getHashSenha() {
+        return md5($this->senha);
     }
 
     function getNome() {
@@ -44,7 +44,7 @@ class Usuario {
         return $this->celular;
     }
 
-    function getTel_fixo() {
+    function getTelFixo() {
         return $this->tel_fixo;
     }
 
