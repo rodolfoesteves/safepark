@@ -1,6 +1,7 @@
 <?php
 
 include '../modelo/Usuario.class.php';
+include './Conexao.class.php';
 
 
 class DAOUsuario {
