@@ -1,12 +1,17 @@
 <?php   /*ENVIO DE EMAIL*/
 
 
+require_once("../dependencias/class.phpmailer.php");
+
+
 class Email{
     
     private $de_nome, $nomeUsuario, $senha, $host, $porta;
 
+   
 
     public function __construct() {
+        
              /*CONFIGURACOES EMAIL*/
              $this->de_nome = 'projetoSafePark'; //NOME DO REMETENTE
              $this->nomeUsuario = 'safepark@bol.com.br'; //NOME DE USUARIO(email) PARA LOGAR NO SMTP
@@ -16,8 +21,12 @@ class Email{
             /*FIM CONFIGURACOES EMAIL*/
       }
 
-function envia_email($para,$assunto,$mensagem){
-	if (smtpmailer($para, $this->nom, $de_nome, $assunto, $mensagem)) {
+    function envia_email($para,$assunto,$mensagem){
+        
+        define('GUSER', $this->nomeUsuario);
+        define('GPWD', $this->senha);
+        
+	if ($this->smtpmailer($para, $this->nomeUsuario, $this->de_nome, $assunto, $mensagem)) {
 		return true;
 	}
 	if (!empty($error)){
@@ -25,16 +34,9 @@ function envia_email($para,$assunto,$mensagem){
  		return false;
 	}
 
-}
+    }
 
-/*
-
-require_once("dependencias/phpmailer/class.phpmailer.php");
-
-define('GUSER', $nomeUsuario);
-define('GPWD', $senha);
-
-function smtpmailer($para, $de, $de_nome, $assunto, $corpo) { 
+    function smtpmailer($para, $de, $de_nome, $assunto, $corpo) { 
 	global $error;
 	$mail = new PHPMailer();
 	$mail->IsSMTP();		// Ativar SMTP
@@ -56,8 +58,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 		$error = 'Mensagem enviada!';
 		return true;
 	}
-}
- */   
+    }
 }
 ?>
  
