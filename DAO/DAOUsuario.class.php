@@ -1,14 +1,14 @@
 <?php
 
-include '../modelo/Usuario.class.php';
-include './Conexao.class.php';
+include_once './modelo/Usuario.class.php';
+include_once 'Conexao.class.php';
 
 
 class DAOUsuario {
     
     public static $instance;
    
-      private function __construct() {
+      public function __construct() {
           //
       }
    
@@ -31,6 +31,7 @@ class DAOUsuario {
       }
     
     public function Inserir(Usuario $usuario) {
+        echo $usuario->getProntuario()."<BR><BR>";
           try {
                   $sql = "INSERT INTO usuario (
                   prontuario,
@@ -59,8 +60,7 @@ class DAOUsuario {
               $p_sql->bindValue(":data_cadastro", $usuario->getData_cadastro());
               return $p_sql->execute();
           } catch (Exception $e) {
-              print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-              GeraLog::getInstance()->inserirLog("Erro: Código: " . $e->getCode() . " Mensagem: " . $e->getMessage());
+              print "Erro: Código: " . $e->getCode() . " Mensagem: " . $e->getMessage();
           }
       }
       
@@ -169,12 +169,12 @@ class DAOUsuario {
           }
       }
    
-      public function BuscarPorEmailSenha($email, $senha) {
+      public function BuscarPorEmailSenha(Usuario $u) {
           try {
-              $sql = "SELECT * FROM usuario WHERE email = :email and senha = :senha";
+              $sql = "SELECT * FROM usuario WHERE email = :email and hash_senha = :hash_senha";
               $p_sql = Conexao::getInstance()->prepare($sql);
-              $p_sql->bindValue(":email", $email);
-              $p_sql->bindValue(":senha", $senha);
+              $p_sql->bindValue(":email", $u->getEmail());
+              $p_sql->bindValue(":hash_senha", $u->getHashSenha());
               $p_sql->execute();
               return $this->populaUsuario($p_sql->fetch(PDO::FETCH_ASSOC));
           } catch (Exception $e) {
@@ -237,8 +237,14 @@ class DAOUsuario {
               print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
           }
       }
+      
+      private function populaUsuario($row) { 
+          $u = new Usuario($row['prontuario'], "", $row['nome'], $row['celular'], $row['tel_fixo'], $row['email'], $row['data_cadastro'], $row['conta_ativa']);
+          return $u;
+      }
    
-      private function populaUsuario($row) {
+      /*
+      private function populaUsuario($row) {          
           $pojo = new PojoUsuario;
           $pojo->setCod_usuario($row['cod_usuario']);
           $pojo->setNome($row['nome']);
@@ -248,6 +254,6 @@ class DAOUsuario {
           $pojo->setPerfil(ControllerPerfil::getInstance()->BuscarPorCOD($row['cod_perfil']));
           return $pojo;
       }
-   
+   */
   }
   ?>

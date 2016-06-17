@@ -1,10 +1,9 @@
 <?php
 
-include './AcessoBD.class.php';
-
 class Usuario {
     
     private $id,
+            $login,
             $prontuario,
             $senha,
             $nome,
@@ -12,9 +11,10 @@ class Usuario {
             $tel_fixo,
             $email,
             $data_cadastro,
-            $data_desativacao;
-            
-    function __construct($prontuario, $senha, $nome, $celular, $tel_fixo, $email, $data_cadastro) {
+            $data_desativacao,
+            $conta_ativa;
+        
+    function __construct($prontuario, $senha, $nome, $celular, $tel_fixo, $email, $data_cadastro, $conta_ativa) {
         $this->prontuario = $prontuario;
         $this->senha = $senha;
         $this->nome = $nome;
@@ -22,10 +22,15 @@ class Usuario {
         $this->tel_fixo = $tel_fixo;
         $this->email = $email;
         $this->data_cadastro = $data_cadastro;
+        $this->conta_ativa = $conta_ativa;
     }
             
     function getId() {
         return $this->id;
+    }
+    
+    function getLogin() {
+        return $this->login;
     }
 
     function getProntuario() {
@@ -59,7 +64,22 @@ class Usuario {
     function getData_desativacao() {
         return $this->data_desativacao;
     }
-
+    
+    function getContaAtiva(){
+        return $this->conta_ativa;
+    }
+    
+    function getCodigoAtivacao(){
+        return md5($this->prontuario
+                .$this->senha
+                .$this->nome
+                .$this->celular
+                .$this->tel_fixo
+                .$this->email
+                .$this->data_cadastro
+                .$this->conta_ativa);
+    }
+            
     function setId($id) {
         $this->id = $id;
     }
