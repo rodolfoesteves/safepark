@@ -1,4 +1,9 @@
-    <div class="section">
+<?php
+$dao_usuario = new DAOUsuario();
+$user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
+?>
+
+<div class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -6,7 +11,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-12">
-                    <h1 class="text-center">Cadastro de Usuarios</h1>
+                    <h1 class="text-center">Meus Cadastro</h1>
                   </div>
                 </div>
               </div>
@@ -15,7 +20,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-              <form class="form-horizontal" role="form" action="./salvar_usuario.php" method="post">
+              <form class="form-horizontal" role="form" action="./editar_usuario.php" method="post">
               <div class="form-group has-feedback" id="prontuario" draggable="true">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">
@@ -23,7 +28,7 @@
                   </label>
                 </div>
                 <div class="col-sm-10">
-                  <input name="prontuario" type="text" class="form-control input-lg" id="inputEmail3" placeholder="Prontuário">
+                    <input name="prontuario" value="<?php $user->getProntuario()?>" type="text" class="form-control input-lg" id="inputEmail3" placeholder="Prontuário">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>

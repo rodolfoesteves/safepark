@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include_once './modelo/Usuario.class.php';
 include_once './DAO/DAOUsuario.class.php';
 
@@ -9,10 +10,16 @@ $user_logado = $dao_usuario->BuscarPorEmailSenha($u);
 
 if($user_logado->getProntuario()){
     if($user_logado->getContaAtiva()=="1"){
-        echo "Usuário ".$user_logado->getNome()." logou!";
+        $_SESSION['nome'] = $user_logado->getNome();
+        $_SESSION['email'] = $user_logado->getEmail();
+        header("location:index.php");
     } else{
-        echo  "Usuário ".$user_logado->getNome()." está desativado!";
+        $_SESSION['user_logado'] = NULL;
+        $_SESSION['mensagem'] = "Usuário desativado. Clique aqui para reenviar seu código de validação.";
+        header("location:index.php");
     }
 } else{
-    echo "Usuário ou senha inválido!";
+    $_SESSION['user_logado'] = NULL;
+    $_SESSION['mensagem'] = "Usuário ou senha inválido!";
+    header("location:index.php");
 }
