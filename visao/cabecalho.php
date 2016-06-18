@@ -28,7 +28,7 @@ include_once './modelo/Usuario.class.php';
           <ul class="nav navbar-nav navbar-right"></ul>
           <ul class="nav navbar-nav navbar-right">
             <?php 
-            if(!is_null($_SESSION['user_logado'])){
+            if(!is_null($_SESSION['nome'])){
             ?>  
             <li id="home" class="disabled">
               <a href="index.php"><i class="fa fa-home fa-lg pull-left text-success"></i>Home</a>
@@ -89,7 +89,7 @@ include_once './modelo/Usuario.class.php';
             <img src="imagens\png_carro11.png" class="center-block img-responsive">
           </div>
             <?php 
-            if(!is_null($_SESSION['user_logado'])){              
+            if(!is_null($_SESSION['nome'])){              
                 echo "<p>Bem vindo ".$_SESSION['nome'].".</p>";
             }else{
                 include_once 'form_login.php';

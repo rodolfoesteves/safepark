@@ -12,14 +12,15 @@ if($user_logado->getProntuario()){
     if($user_logado->getContaAtiva()=="1"){
         $_SESSION['nome'] = $user_logado->getNome();
         $_SESSION['email'] = $user_logado->getEmail();
+        $_SESSION['mensagem'] = "Bem vindo ".$user_logado->getNome().".";
         header("location:index.php");
     } else{
-        $_SESSION['user_logado'] = NULL;
+        $_SESSION['nome'] = NULL;
         $_SESSION['mensagem'] = "Usuário desativado. Clique aqui para reenviar seu código de validação.";
         header("location:index.php");
     }
 } else{
-    $_SESSION['user_logado'] = NULL;
+    $_SESSION['nome'] = NULL;
     $_SESSION['mensagem'] = "Usuário ou senha inválido!";
     header("location:index.php");
 }

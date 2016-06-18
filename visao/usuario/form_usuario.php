@@ -11,7 +11,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
               <div class="container">
                 <div class="row">
                   <div class="col-md-12">
-                    <h1 class="text-center">Meus Cadastro</h1>
+                    <h1 class="text-center">Meu Cadastro</h1>
                   </div>
                 </div>
               </div>
@@ -20,7 +20,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
         </div>
         <div class="row">
           <div class="col-md-12">
-              <form class="form-horizontal" role="form" action="./editar_usuario.php" method="post">
+              <form class="form-horizontal" role="form" action="./salvar_usuario.php" method="post">
               <div class="form-group has-feedback" id="prontuario" draggable="true">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">
@@ -28,7 +28,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
                   </label>
                 </div>
                 <div class="col-sm-10">
-                    <input name="prontuario" value="<?php $user->getProntuario()?>" type="text" class="form-control input-lg" id="inputEmail3" placeholder="Prontuário">
+                    <input name="prontuario" value="<?php echo $user->getProntuario() ?>" type="text" class="form-control input-lg" id="inputEmail3" placeholder="Prontuário">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>
@@ -39,7 +39,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
                   </label>
                 </div>
                 <div class="col-sm-10">
-                  <input name="nome" type="text" class="form-control input-lg" id="inputEmail3" placeholder="Nome">
+                    <input name="nome" value="<?php echo $user->getNome() ?>"  type="text" class="form-control input-lg" id="inputEmail3" placeholder="Nome">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>
@@ -50,7 +50,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
                   </label>
                 </div>
                 <div class="col-sm-10">
-                  <input name="celular" type="text" class="form-control input-lg" placeholder="celular" id="campoTelefone">
+                    <input name="celular" value="<?php echo $user->getCelular() ?>" type="text" class="form-control input-lg" placeholder="celular" id="campoTelefone">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>
@@ -61,7 +61,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
                   </label>
                 </div>
                 <div class="col-sm-10">
-                  <input name="fixo" type="text" class="form-control input-lg" id="campoTelefone" placeholder="telefone_fixo">
+                    <input name="fixo" value="<?php echo $user->getTelFixo() ?>" type="text" class="form-control input-lg" id="campoTelefone" placeholder="telefone_fixo">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>
@@ -72,7 +72,7 @@ $user = $dao_usuario->BuscarPorEmail($_SESSION['email']);
                   </label>
                 </div>
                 <div class="col-sm-10">
-                  <input name="email" type="email" class="form-control input-lg" id="inputEmail3" placeholder="email">
+                    <input name="email" value="<?php echo $user->getEmail() ?>" type="email" class="form-control input-lg" id="inputEmail3" placeholder="email">
                   <span class="fa fa-check form-control-feedback"></span>
                 </div>
               </div>
