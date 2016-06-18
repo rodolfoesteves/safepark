@@ -9,7 +9,7 @@
           <div class="col-md-6">
             <h1>SafePark</h1>
             <h3>Sistema de Gerenciamento de Estacionamento</h3>
-            <p>O sistema SafeParque foi desenvolvbido para controle e gerenciamento dos
+            <p>O sistema SafePark foi desenvolvido para controle e gerenciamento dos
               usuarios do estacionamento do IFSP- Campus Hortolândia.&nbsp;</p>
           </div>
         </div>
